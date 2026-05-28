@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Home Theaters, Acoustics & Smart Automation | 3V TEK</title>
+  <meta name="description"
+    content="Reference-grade home theatres, multi-room audio, acoustic engineering for auditoriums, conference rooms and cinemas, plus smart automation by 3V TEK Hyderabad." />
+  <link rel="canonical" href="https://3vtek.com/services" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- <section class="page-hero">
+    <div class="container-3v reveal">
+      <span class="eyebrow muted">Services</span>
+      <h1 class="text-balance">From acoustic envelopes <span class="italic-light">to cinematic rooms.</span></h1>
+      <p>Every project begins with the room. We engineer sound and image into spaces that feel inevitable — residential,
+        commercial and everywhere in between.</p>
+    </div>
+  </section> -->
+
+  <section class="section border-t">
+    <div class="container-3v">
+      <div class="reveal"><span class="eyebrow muted">01 — Engineered to immerse</span>
+        <h2 class="display mt-4">Audio-Visual Solutions.</h2>
+      </div>
+      <div class="grid-3 mt-14" id="av-grid"></div>
+    </div>
+  </section>
+
+  <section class="section bg-soft">
+    <div class="container-3v">
+      <div class="reveal"><span class="eyebrow muted">02 — Sound, shaped by space</span>
+        <h2 class="display mt-4">Acoustic Services.</h2>
+        <p class="lead">Treatment, diffusion and isolation — designed for the way the room is used, not just how it
+          looks.</p>
+      </div>
+      <div class="grid-3 mt-14" id="acoustic-grid" style="grid-template-columns:1fr;"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-3v">
+      <div class="reveal"><span class="eyebrow muted">Our process</span>
+        <h2 class="display mt-4">Four disciplined steps.</h2>
+      </div>
+      <div class="process" id="process-grid"></div>
+    </div>
+  </section>
+
+  <section class="section bg-ink">
+    <div class="container-3v cta-end">
+      <h2 class="display text-balance">Have a space in mind? Let's design the experience.</h2>
+      <a href="contact.html" class="btn btn-ink-foreground">Start a project <span id="cta-arr"></span></a>
+    </div>
+  </section>
+
+  <script src="js/site.js"></script>
+  <script>
+    window.initSite();
+    document.getElementById("cta-arr").innerHTML = window.ICON.arrowUpRight;
+
+    var av = [{
+        title: "Home Theatres",
+        desc: "Reference-grade cinema rooms, custom-tuned for your space and taste.",
+        img: "assets/Project-images/Home-Theatre.webp"
+      },
+      {
+        title: "Club House Mini Theatre",
+        desc: "Compact, high-impact theatre experiences for residential clubs and lounges.",
+        img: "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        title: "Multi-Room Audio",
+        desc: "Whole-home audio that follows you, room to room, perfectly synchronised.",
+        img: "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1200&q=80"
+      },
+    ];
+    document.getElementById("av-grid").innerHTML = av.map(function (s, i) {
+      return '<div class="reveal" data-delay="' + (i * 100) + '"><article class="image-card">' +
+        '<div class="ratio"><img src="' + s.img + '" alt="' + s.title +
+        '" loading="lazy" style="opacity:1;"></div>' +
+        '<div class="overlay"></div>' +
+        '<div class="body" style="justify-content:flex-end;"><div><h3>' + s.title + '</h3><p>' + s.desc + '</p>' +
+        '<a href="contact.html" class="more">Enquire ' + window.ICON.arrowUpRight + '</a></div></div>' +
+        '</article></div>';
+    }).join("");
+
+    var acoustic = [{
+        title: "Home Theatre",
+        img: "assets/Project-images/Private_Residence_1.0.webp"
+      },
+      {
+        title: "Conference Rooms",
+        img: "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        title: "Auditorium",
+        img: "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        title: "Cinema Theatres",
+        img: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        title: "Convention Halls",
+        img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        title: "Pubs & Lounges",
+        img: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80"
+      },
+    ];
+    var ag = document.getElementById("acoustic-grid");
+    ag.style.cssText = "display:grid;gap:1.5rem;";
+    ag.innerHTML = acoustic.map(function (s, i) {
+      return '<div class="reveal" data-delay="' + (i * 80) + '"><a href="contact.html" class="tile">' +
+        '<div class="ratio"><img src="' + s.img + '" alt="' + s.title + '" loading="lazy"></div>' +
+        '<div class="scrim"></div>' +
+        '<div class="label"><h3>' + s.title + '</h3>' + window.ICON.arrowUpRight + '</div>' +
+        '</a></div>';
+    }).join("");
+    var mq = window.matchMedia("(min-width: 640px)");
+
+    function gridCols() {
+      ag.style.gridTemplateColumns = window.matchMedia("(min-width:1024px)").matches ? "repeat(3,1fr)" : (mq.matches ?
+        "repeat(2,1fr)" : "1fr");
+    }
+    gridCols();
+    window.addEventListener("resize", gridCols);
+
+    var process = [{
+        n: "01",
+        t: "Consultation",
+        d: "We listen, measure, and understand intent."
+      },
+      {
+        n: "02",
+        t: "Tailored Design",
+        d: "Acoustic + AV solutions, thoughtfully planned from start to finish"
+      },
+      {
+        n: "03",
+        t: "Seamless Installation",
+        d: "Disciplined craftsmanship, on schedule."
+      },
+      {
+        n: "04",
+        t: "Precision Calibration",
+        d: "Tuned by ear and instrument, until it disappears."
+      },
+    ];
+    document.getElementById("process-grid").innerHTML = process.map(function (p, i) {
+      return '<div class="reveal" data-delay="' + (i * 80) + '"><div class="num">' + p.n + '</div><h3>' + p.t +
+        '</h3><p>' + p.d + '</p></div>';
+    }).join("");
+
+    window.initReveal();
+  </script>
+</body>
+
+</html>

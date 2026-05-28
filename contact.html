@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact 3V TEK — Banjara Hills Experience Center, Hyderabad</title>
+  <meta name="description"
+    content="Plan a private demo at our Banjara Hills experience center. Call +91 97000 01617 or email info@3vtek.com." />
+  <link rel="canonical" href="https://3vtek.com/contact" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <!-- <section class="page-hero">
+    <div class="container-3v reveal">
+      <span class="eyebrow muted">Contact</span>
+      <h1 class="text-balance">Let's design <span class="italic-light">your experience.</span></h1>
+      <p>Reach out for consultation, project enquiries or to plan a visit to our Banjara Hills experience center.</p>
+    </div>
+  </section> -->
+
+  <section class="section border-t">
+    <div class="container-3v contact-grid">
+      <div class="reveal contact-form">
+        <form id="contact-form" novalidate>
+          <div class="row">
+            <div class="field"><label for="name">Name</label><input id="name" name="name" required /></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required />
+            </div>
+          </div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required /></div>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="5"
+              required></textarea></div>
+          <button type="submit" class="btn btn-ink" id="submit-btn">Send enquiry</button>
+        </form>
+      </div>
+      <div class="reveal contact-info" data-delay="120">
+        <span class="eyebrow muted">Direct lines</span>
+        <ul>
+          <li><span id="i-phone"></span>
+            <div>
+              <div class="lbl">Phone</div><a href="tel:9700001617" class="big link-underline">+91 97000 01617</a>
+            </div>
+          </li>
+          <li><span id="i-mail"></span>
+            <div>
+              <div class="lbl">Email</div>
+              <a href="mailto:info@3vtek.com" class="link-underline">info@3vtek.com</a>
+            </div>
+          </li>
+          <li><span id="i-globe"></span>
+            <div>
+              <div class="lbl">Website</div><a href="https://3vtek.com/" class="link-underline">3vtek.com</a>
+            </div>
+          </li>
+          <li><span id="i-pin"></span>
+            <div>
+              <div class="lbl">Experience Center</div><a href="https://maps.app.goo.gl/NXw88sERJRh9C4dh9"
+                target="_blank" rel="noreferrer" class="link-underline" style="line-height:1.6;">SS Plaza, 401, Rd
+                Number 4, Banjara Hills, Hyderabad, Telangana 500034</a>
+            </div>
+          </li>
+        </ul>
+        <div class="contact-note"><strong>Offline purchase only.</strong> Products are demonstrated and sold exclusively
+          at our Banjara Hills experience center.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t-dark map-wrap">
+    <iframe title="3V TEK location"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.821357974978!2d78.4461932!3d17.420358699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb918ebec35f1b%3A0x1f40e434afb8ad92!2s3VTEK%20HOME%20THEATRE%20EXPERIENCE%20CENTER!5e0!3m2!1sen!2sin!4v1777975903846!5m2!1sen!2sin"
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+    </iframe>
+  </section>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script src="js/site.js"></script>
+  <script>
+    // ─────────────────────────────────────────────
+    // EMAILJS KEYS — Replace the 3 values below
+    // with your actual keys from emailjs.com
+    // ─────────────────────────────────────────────
+    var EMAILJS_PUBLIC_KEY = "y7-i7Z0hRqSNQsIAo"; // ← Paste your Public Key here
+    var EMAILJS_SERVICE_ID = "service_dp5eaas"; // ← Paste your Service ID here
+    var EMAILJS_TEMPLATE_ID = "template_fzjyg3j"; // ← Paste your Template ID here
+    // ─────────────────────────────────────────────
+
+    emailjs.init({
+      publicKey: EMAILJS_PUBLIC_KEY
+    });
+
+    window.initSite();
+    document.getElementById("i-phone").innerHTML = window.ICON.phone;
+    document.getElementById("i-mail").innerHTML = window.ICON.mail;
+    document.getElementById("i-globe").innerHTML = window.ICON.globe;
+    document.getElementById("i-pin").innerHTML = window.ICON.pin;
+
+    var f = document.getElementById("contact-form");
+    var btn = document.getElementById("submit-btn");
+
+    f.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var data = new FormData(f);
+      var name = String(data.get("name") || "").trim();
+      var email = String(data.get("email") || "").trim();
+      var phone = String(data.get("phone") || "").trim();
+      var msg = String(data.get("message") || "").trim();
+
+      if (!name || !email || !phone || !msg) {
+        window.toast("Please fill in all required fields.", "", "error");
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = "Sending…";
+
+      emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, f)
+        .then(function () {
+          window.toast("Thanks! We'll get back to you shortly.", "We've received your enquiry, " + name + ".");
+          f.reset();
+          btn.disabled = false;
+          btn.textContent = "Send enquiry";
+        })
+        .catch(function (err) {
+          console.error("EmailJS error:", err);
+          window.toast("Something went wrong. Please try again.", "", "error");
+          btn.disabled = false;
+          btn.textContent = "Send enquiry";
+        });
+    });
+  </script>
+</body>
+
+</html>

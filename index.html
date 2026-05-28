@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <title>3V TEK — Home Theaters, Acoustics & Automation in Hyderabad</title>
+  <meta name="description"
+    content="Bespoke home theaters, acoustic engineering and smart automation since 2016. 20+ years of expertise. Visit our Banjara Hills experience center in Hyderabad." />
+  <meta name="author" content="3V TEK" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://3vtek.com/" />
+
+  <meta property="og:title" content="3V TEK — Home Theaters, Acoustics & Automation" />
+  <meta property="og:description"
+    content="Bespoke home theaters, acoustic engineering and smart automation. 20+ years of expertise. Banjara Hills, Hyderabad." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://3vtek.com/" />
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=1600&q=80" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <!-- HERO -->
+  <section class="hero grain">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="assets/Background video.mp4" type="video/mp4" />
+    </video>
+    <div class="ink-overlay"></div>
+    <div class="vignette"></div>
+    <div class="hero-content">
+      <div class="container-3v">
+        <div class="animate-fade-in" style="max-width: 56rem;">
+          <span class="eyebrow" style="color: rgba(250,250,250,0.8);">Since 2016 · Hyderabad</span>
+          <h1 class="text-balance">Transforming<br />Audio-Visual<br /><span class="italic-light">Experiences.</span>
+          </h1>
+          <p>Custom home theaters, acoustic engineering and smart automation — crafted with 20+ years of expertise.</p>
+          <div class="cta-row">
+            <a href="services.html" class="btn btn-ink-foreground">Explore Services <span id="hero-arr"></span></a>
+            <a href="contact.html" class="btn btn-outline-light"><span id="hero-play"></span> Visit Experience
+              Center</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">Scroll</div>
+  </section>
+
+  <!-- INTRO STRIP -->
+  <section class="section" style="border-bottom: 1px solid var(--hairline);">
+    <div class="container-3v" style="display:grid;gap:2.5rem;">
+      <div class="reveal"><span class="eyebrow muted">About 3V TEK</span></div>
+      <div class="reveal" data-delay="120">
+        <h2 class="display lg text-balance">3VTEK home theaters, acoustic spaces and automation — engineered to feel
+          inevitable.</h2>
+        <p class="lead">At 3V TEK, every project is one-of-a-kind. From consultation and tailored design to seamless
+          installation and precision calibration, we deliver experiences that exceed expectation — at competitive
+          prices.</p>
+        <a href="about.html" class="link-underline mt-8"
+          style="display:inline-flex;gap:.5rem;align-items:center;font-size:14px;font-weight:600;">Our story <span
+            id="intro-arr"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES PREVIEW -->
+  <section class="section bg-soft">
+    <div class="container-3v">
+      <div class="flex-between">
+        <div class="reveal"><span class="eyebrow muted">What we craft</span>
+          <h2 class="display mt-4">Three disciplines. One signature.</h2>
+        </div>
+        <div class="reveal" data-delay="120"><a href="services.html" class="link-underline"
+            style="font-size:14px;font-weight:600;">All services →</a></div>
+      </div>
+      <div class="grid-3 mt-14" id="services-grid"></div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section bg-ink">
+    <div class="container-3v">
+      <div class="reveal">
+        <span class="eyebrow" style="color:rgba(250,250,250,0.6);">By the numbers</span>
+        <h2 class="display lg mt-4" style="max-width:42rem; line-height: 110%; letter-spacing:0.001px;">Ten years of
+          3VTEK. Two decades of
+          mastery.</h2>
+      </div>
+      <div class="stats-grid" id="stats-grid"></div>
+    </div>
+  </section>
+
+  <!-- BRANDS MARQUEE -->
+  <section class="marquee-section">
+    <div class="container-3v" style="margin-bottom:2rem;"><span class="eyebrow muted">Clientele</span></div>
+    <div class="marquee-mask">
+      <div class="marquee-track" id="marquee-track"></div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <!-- <section class="section">
+    <div class="container-3v">
+      <div class="flex-between">
+        <div class="reveal"><span class="eyebrow muted">Selected work</span>
+          <h2 class="display mt-4">Recent installations.</h2>
+        </div>
+        <div class="reveal" data-delay="120"><a href="projects.html" class="link-underline"
+            style="font-size:14px;font-weight:600;">All projects →</a></div>
+      </div>
+      <div class="grid-3 mt-14" id="featured-projects"></div>
+    </div>
+  </section> -->
+
+  <!-- TESTIMONIAL (Carousel) -->
+  <section class="section bg-soft border-y">
+    <div class="container-3v testimonial reveal">
+      <span class="eyebrow muted">In their words</span>
+      <!-- <h2 class="display mt-4">Real reviews</h2> -->
+
+      <div id="testimonial-carousel" class="testimonial-carousel" role="region" aria-roledescription="carousel"
+        aria-label="Client testimonials">
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+            <article class="carousel-card">
+              <div class="review-card__top">
+                <!-- <div class="review-avatar" aria-hidden="true"></div> -->
+                <div class="review-author">
+                  <span class="review-name">Mr Vinay</span>
+                  <span class="review-location">Kompally</span>
+                </div>
+                <span class="quote-mark" aria-hidden="true">“</span>
+              </div>
+              <p class="quote text-balance">We finally finished our home theater room and the difference is
+                unbelievable. The sound is clean without being too loud, and even regular movie nights feel like a
+                theater experience now. Everyone who visits asks who designed the acoustics.</p>
+              <div class="review-rating" aria-label="4 out of 5 stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+            </article>
+
+            <article class="carousel-card">
+              <div class="review-card__top">
+                <!-- <div class="review-avatar" aria-hidden="true"></div> -->
+                <div class="review-author">
+                  <span class="review-name">Mrs Jyothirmayi</span>
+                  <span class="review-location">Bowenpalli</span>
+                </div>
+                <span class="quote-mark" aria-hidden="true">“</span>
+              </div>
+              <p class="quote text-balance">From the first demo to the final installation, everything was very
+                professional. The home theater looks classy and the acoustics made a big difference. Even low volume
+                sounds rich and detailed.</p>
+              <div class="review-rating" aria-label="4 out of 5 stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+            </article>
+
+            <article class="carousel-card">
+              <div class="review-card__top">
+                <!-- <div class="review-avatar" aria-hidden="true"></div> -->
+                <div class="review-author">
+                  <span class="review-name">Mr Balaji Tunuguntla</span>
+                  <span class="review-location"></span>
+                </div>
+                <span class="quote-mark" aria-hidden="true">“</span>
+              </div>
+              <p class="quote text-balance">Nice experience. Raghavendra is very passionate and patient in explaining
+                about multiple factors. They also have demo room. Please visit to experience it.</p>
+              <div class="review-rating" aria-label="4 out of 5 stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+            </article>
+
+            <article class="carousel-card">
+              <div class="review-card__top">
+                <!-- <div class="review-avatar" aria-hidden="true"></div> -->
+                <div class="review-author">
+                  <span class="review-name">Mr Srikanth Reddy</span>
+                  <span class="review-location">Beeramguda</span>
+                </div>
+                <span class="quote-mark" aria-hidden="true">“</span>
+              </div>
+              <p class="quote text-balance">Amazing service and very professional setup. The sound quality is excellent
+                and everything was explained clearly by Raghavendra Garu.</p>
+              <div class="review-rating" aria-label="4 out of 5 stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <!-- <span class="star muted">★</span> -->
+              </div>
+            </article>
+
+            <article class="carousel-card">
+              <div class="review-card__top">
+                <!-- <div class="review-avatar" aria-hidden="true"></div> -->
+                <div class="review-author">
+                  <span class="review-name">Mr Srinivas Nagamalli</span>
+                  <!-- <span class="review-location"></span> -->
+                </div>
+                <span class="quote-mark" aria-hidden="true">“</span>
+              </div>
+              <p class="quote text-balance">Raghavendra Reddy garu explained clearly the concept of home theatre system,
+                pleasantly. Happy to visit demo room.</p>
+              <div class="review-rating" aria-label="4 out of 5 stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+            </article>
+
+            <article class="carousel-card">
+              <div class="review-card__top">
+                <!-- <div class="review-avatar" aria-hidden="true"></div> -->
+                <div class="review-author">
+                  <span class="review-name">Mr Charan Chowdary</span>
+                  <span class="review-location">Kokapet</span>
+                </div>
+                <span class="quote-mark" aria-hidden="true">“</span>
+              </div>
+              <p class="quote text-balance">Highly recommended for home theater setup and projector installation. Great
+                sound quality, affordable pricing, and very neat work by Mr Raghavendra and team.</p>
+              <div class="review-rating" aria-label="4 out of 5 stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+            </article>
+
+            <article class="carousel-card">
+              <div class="review-card__top">
+                <!-- <div class="review-avatar" aria-hidden="true"></div> -->
+                <div class="review-author">
+                  <span class="review-name">Mr Gnaneshwar Reddy</span>
+                  <!-- <span class="review-location"></span> -->
+                </div>
+                <span class="quote-mark" aria-hidden="true">“</span>
+              </div>
+              <p class="quote text-balance">I'd definitely recommend them if you appreciate excellent room acoustics.
+              </p>
+              <div class="review-rating" aria-label="4 out of 5 stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="carousel-controls">
+          <button type="button" class="carousel-arrow prev" aria-label="Previous reviews">‹</button>
+          <button type="button" class="carousel-arrow next" aria-label="Next reviews">›</button>
+        </div>
+
+        <div class="carousel-dots" role="tablist" aria-label="Review pages"></div>
+      </div>
+
+      <style>
+        .testimonial {
+          text-align: center;
+          max-width: 72rem;
+          margin: 0 auto;
+        }
+
+        .testimonial .eyebrow {
+          justify-content: center;
+          margin: 0 auto 0.75rem;
+          max-width: 18rem;
+        }
+
+        .testimonial .display {
+          margin-top: 0.5rem;
+        }
+
+        .testimonial-carousel {
+          width: min(100%, 84rem);
+          margin: 1.5rem auto 0;
+        }
+
+        .carousel-viewport {
+          overflow-x: auto;
+          overflow-y: hidden;
+          border-radius: 28px;
+          /* background: rgba(255, 255, 255, 0.95); */
+          /* border: 1px solid rgba(15, 15, 15, 0.08); */
+          /* box-shadow: var(--shadow-soft); */
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .carousel-viewport::-webkit-scrollbar {
+          display: none;
+        }
+
+        .carousel-track {
+          display: flex;
+          gap: 1.5rem;
+          padding: 0;
+          align-items: stretch;
+          scroll-behavior: smooth;
+        }
+
+        .carousel-card {
+          flex: 0 0 100%;
+          max-width: 100%;
+          scroll-snap-align: start;
+          background: var(--background);
+          border: 1px solid rgba(15, 15, 15, 0.08);
+          border-radius: 24px;
+          padding: 2rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          min-height: 320px;
+          box-shadow: 0 24px 60px -40px rgba(15, 15, 15, 0.25);
+        }
+
+        .review-card__top {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          position: relative;
+          padding-right: 2.5rem;
+          margin-bottom: 1.25rem;
+        }
+
+        .review-avatar {
+          width: 54px;
+          height: 54px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, rgba(15, 15, 15, 0.06), rgba(15, 15, 15, 0.03));
+          border: 1px solid rgba(15, 15, 15, 0.08);
+        }
+
+        .review-author {
+          text-align: left;
+          flex: 1;
+        }
+
+        .review-name {
+          display: block;
+          font-size: 1rem;
+          font-weight: 700;
+          letter-spacing: -0.02em;
+        }
+
+        .review-location {
+          display: block;
+          margin-top: 0.2rem;
+          font-size: 0.88rem;
+          color: var(--muted-foreground);
+        }
+
+        .quote-mark {
+          position: absolute;
+          right: 0;
+          top: -0.25rem;
+          font-size: 3.5rem;
+          line-height: 1;
+          color: rgba(15, 15, 15, 0.12);
+        }
+
+        .quote {
+          margin: 0;
+          font-size: clamp(1rem, 2vw, 1.15rem);
+          line-height: 1.75;
+          color: rgba(15, 15, 15, 0.92);
+          max-width: 56rem;
+        }
+
+        .review-rating {
+          display: flex;
+          justify-content: center;
+          gap: 0.3rem;
+          margin-top: 1.5rem;
+          color: rgba(15, 15, 15, 0.85);
+        }
+
+        .star {
+          font-size: 1rem;
+          line-height: 1;
+        }
+
+        .star.muted {
+          color: rgba(15, 15, 15, 0.34);
+        }
+
+        .carousel-controls {
+          display: flex;
+          justify-content: center;
+          gap: 0.75rem;
+          margin-top: 1.5rem;
+        }
+
+        .carousel-arrow {
+          width: 44px;
+          height: 44px;
+          display: grid;
+          place-items: center;
+          border-radius: 999px;
+          border: 1px solid rgba(15, 15, 15, 0.08);
+          font-size: 1.1rem;
+          cursor: pointer;
+          transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+        }
+
+        .carousel-arrow.prev {
+          background: var(--background);
+          color: var(--ink);
+          box-shadow: 0 12px 30px -18px rgba(15, 15, 15, 0.3);
+        }
+
+        .carousel-arrow.next {
+          background: var(--ink);
+          color: var(--ink-foreground);
+        }
+
+        .carousel-arrow:hover,
+        .carousel-arrow:focus-visible {
+          transform: scale(1.05);
+          outline: none;
+        }
+
+        .carousel-arrow:focus-visible {
+          box-shadow: 0 0 0 4px rgba(15, 15, 15, 0.12);
+        }
+
+        .carousel-dots {
+          display: flex;
+          gap: 0.75rem;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 1rem;
+        }
+
+        .carousel-dots button {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          border: 0;
+          background: rgba(15, 15, 15, 0.15);
+          cursor: pointer;
+          transition: transform 180ms ease, background 180ms ease;
+        }
+
+        .carousel-dots button.active {
+          background: var(--ink, #111);
+          transform: scale(1.2);
+        }
+
+        .carousel-dots button:focus-visible {
+          outline: 2px solid rgba(15, 15, 15, 0.35);
+          outline-offset: 3px;
+        }
+
+        @media (max-width: 640px) {
+          .carousel-track {
+            gap: 1rem;
+          }
+
+          .carousel-card {
+            padding: 1.75rem 1.25rem;
+          }
+
+          .review-card__top {
+            padding-right: 1.5rem;
+          }
+
+          .quote-mark {
+            font-size: 3.1rem;
+          }
+
+          .carousel-arrow {
+            width: 38px;
+            height: 38px;
+          }
+        }
+
+        @media (min-width: 768px) {
+          .carousel-card {
+            flex: 0 0 calc((100% - 1.5rem) / 2);
+            max-width: calc((100% - 1.5rem) / 2);
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .carousel-card {
+            flex: 0 0 calc((100% - 3rem) / 3);
+            max-width: calc((100% - 3rem) / 3);
+          }
+        }
+      </style>
+
+      <script>
+        (function () {
+          const root = document.getElementById('testimonial-carousel');
+          if (!root) return;
+
+          const viewport = root.querySelector('.carousel-viewport');
+          const cards = Array.from(root.querySelectorAll('.carousel-card'));
+          const prevBtn = root.querySelector('.carousel-arrow.prev');
+          const nextBtn = root.querySelector('.carousel-arrow.next');
+          const dotsWrap = root.querySelector('.carousel-dots');
+
+          let current = 0;
+          let interval = null;
+          let pauseTimer = null;
+          const delay = 6000;
+
+          function getVisibleCount() {
+            if (window.innerWidth >= 1024) return 3;
+            if (window.innerWidth >= 768) return 2;
+            return 1;
+          }
+
+          function getPageCount(visibleCount) {
+            return Math.max(1, Math.ceil(cards.length / visibleCount));
+          }
+
+          function clampPage(index, visibleCount) {
+            const maxPage = getPageCount(visibleCount) - 1;
+            return Math.max(0, Math.min(index, maxPage));
+          }
+
+          function goTo(index) {
+            scrollToPage(index);
+          }
+
+          function createDot(index, visibleCount) {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.setAttribute('role', 'tab');
+            const start = index * visibleCount + 1;
+            const end = Math.min((index + 1) * visibleCount, cards.length);
+            button.setAttribute('aria-label', `Show reviews ${start} to ${end}`);
+            button.dataset.index = index;
+            button.addEventListener('click', () => {
+              goTo(index);
+              pauseAuto();
+            });
+            return button;
+          }
+
+          function renderDots(visibleCount) {
+            const pageCount = getPageCount(visibleCount);
+            dotsWrap.innerHTML = '';
+            for (let i = 0; i < pageCount; i += 1) {
+              dotsWrap.appendChild(createDot(i, visibleCount));
+            }
+          }
+
+          function updateDots(visibleCount) {
+            const pageCount = getPageCount(visibleCount);
+            if (dotsWrap.children.length !== pageCount) {
+              renderDots(visibleCount);
+            }
+            Array.from(dotsWrap.children).forEach((dot, index) => {
+              const active = index === current;
+              dot.classList.toggle('active', active);
+              dot.setAttribute('aria-selected', active ? 'true' : 'false');
+            });
+          }
+
+          function scrollToPage(index, instant = false) {
+            const visibleCount = getVisibleCount();
+            const maxPage = getPageCount(visibleCount) - 1;
+            current = Math.max(0, Math.min(index, maxPage));
+            viewport.scrollTo({
+              left: current * viewport.clientWidth,
+              behavior: instant ? 'auto' : 'smooth'
+            });
+            updateDots(visibleCount);
+          }
+
+          function prev() {
+            goTo(current - 1);
+          }
+
+          function next() {
+            goTo(current + 1);
+          }
+
+          function startAuto() {
+            if (interval) return;
+            interval = setInterval(next, delay);
+          }
+
+          function stopAuto() {
+            if (interval) {
+              clearInterval(interval);
+              interval = null;
+            }
+          }
+
+          function pauseAuto() {
+            stopAuto();
+            clearTimeout(pauseTimer);
+            pauseTimer = setTimeout(startAuto, delay);
+          }
+
+          prevBtn.addEventListener('click', () => {
+            prev();
+            pauseAuto();
+          });
+
+          nextBtn.addEventListener('click', () => {
+            next();
+            pauseAuto();
+          });
+
+          root.addEventListener('mouseenter', stopAuto);
+          root.addEventListener('mouseleave', pauseAuto);
+          root.addEventListener('focusin', stopAuto);
+          root.addEventListener('focusout', pauseAuto);
+
+          let startX = null;
+          viewport.addEventListener('touchstart', (event) => {
+            startX = event.touches[0].clientX;
+            stopAuto();
+          }, {
+            passive: true
+          });
+
+          viewport.addEventListener('touchend', (event) => {
+            if (startX === null) return;
+            const dx = event.changedTouches[0].clientX - startX;
+            if (Math.abs(dx) > 40) {
+              if (dx > 0) prev();
+              else next();
+            }
+            startX = null;
+            pauseAuto();
+          });
+
+          root.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowLeft') {
+              prev();
+              pauseAuto();
+            }
+            if (event.key === 'ArrowRight') {
+              next();
+              pauseAuto();
+            }
+          });
+
+          window.addEventListener('resize', () => {
+            const visibleCount = getVisibleCount();
+            current = clampPage(current, visibleCount);
+            scrollToPage(current, true);
+          });
+
+          root.tabIndex = 0;
+          updateDots(getVisibleCount());
+          startAuto();
+        })();
+      </script>
+
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="section bg-ink">
+    <div class="container-3v" style="display:grid;gap:2.5rem;">
+      <div class="reveal">
+        <span class="eyebrow" style="color:rgba(250,250,250,0.6);">Visit us</span>
+        <h2 class="display lg text-balance mt-6" style="max-width:48rem;">Immerse yourself at our Banjara Hills
+          experience center.</h2>
+      </div>
+      <div class="reveal" data-delay="120">
+        <p style="color:rgba(250,250,250,0.7);max-width:32rem;line-height:1.7;">Hear it. Feel it. Then design yours.
+          Schedule a private demo with our team.</p>
+        <a href="contact.html" class="btn btn-ink-foreground mt-8">Book a visit <span id="cta-arr"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/site.js"></script>
+  <script src="js/home.js"></script>
+</body>
+
+</html>

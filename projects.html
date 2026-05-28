@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <title>Projects — 3VTEK Home Theaters, Acoustics & Automation | 3V TEK</title>
+  <meta name="description"
+    content="A visual portfolio of 3VTEK installations by 3V TEK across Hyderabad — private cinemas, auditoriums, boardrooms and luxury multi-room audio." />
+  <link rel="canonical" href="https://3vtek.com/projects" />
+  <meta property="og:title" content="Projects — 3V TEK" />
+  <meta property="og:description"
+    content="A visual portfolio of 3VTEK installations across Hyderabad and South India." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://3vtek.com/projects" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Main site CSS (navbar, footer, etc.) -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Lovable page styles -->
+  <style>
+    /* 3V TEK — Projects page (vanilla) */
+    :root {
+      --background: #ffffff;
+      --foreground: #0f0f0f;
+      --muted-foreground: #666666;
+      --hairline: #e0e0e0;
+      --ink: #0a0a0a;
+      --ink-foreground: #fafafa;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    body.no-scroll {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    ::selection {
+      background: var(--ink);
+      color: var(--ink-foreground);
+    }
+
+    .muted {
+      color: var(--muted-foreground);
+    }
+
+    .on-dark {
+      color: rgba(250, 250, 250, 0.6);
+    }
+
+    /* Eyebrow */
+    .lv-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+    }
+
+    .lv-eyebrow::before {
+      content: "";
+      display: inline-block;
+      height: 1px;
+      width: 32px;
+      background: currentColor;
+      opacity: 0.6;
+    }
+
+    /* Display heading */
+    .lv-display {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 0.95;
+      font-size: clamp(2.75rem, 7vw, 6rem);
+      margin-top: 24px;
+      text-wrap: balance;
+    }
+
+    .lv-display-md {
+      font-size: clamp(2.25rem, 5.5vw, 3.75rem);
+    }
+
+    .italic-light {
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    /* Reveal */
+    .lv-reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+      will-change: opacity, transform;
+    }
+
+    .lv-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Hero */
+    .lv-hero {
+      padding: 160px 0 48px;
+    }
+
+    @media (min-width: 768px) {
+      .lv-hero {
+        padding: 208px 0 64px;
+      }
+    }
+
+    .lv-lede {
+      margin-top: 32px;
+      max-width: 42rem;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--muted-foreground);
+    }
+
+    @media (min-width: 768px) {
+      .lv-lede {
+        font-size: 1.125rem;
+      }
+    }
+
+    /* Container */
+    .lv-container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    @media (min-width: 768px) {
+      .lv-container {
+        padding: 0 40px;
+      }
+    }
+
+    /* Gallery */
+    .lv-gallery-section {
+      border-top: 1px solid var(--hairline);
+      padding-bottom: 96px;
+    }
+
+    @media (min-width: 768px) {
+      .lv-gallery-section {
+        padding-bottom: 128px;
+      }
+    }
+
+    .lv-gallery-section .lv-container {
+      padding-top: 48px;
+    }
+
+    @media (min-width: 768px) {
+      .lv-gallery-section .lv-container {
+        padding-top: 64px;
+      }
+    }
+
+    .lv-grid {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: 768px) {
+      .lv-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .lv-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    .lv-tile {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+      background: var(--ink);
+      aspect-ratio: 1 / 1;
+    }
+
+    .lv-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s var(--ease);
+    }
+
+    .lv-tile:hover img {
+      transform: scale(1.1);
+    }
+
+    .lv-tile .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 10, 10, 0);
+      transition: background 0.5s var(--ease);
+    }
+
+    .lv-tile:hover .overlay {
+      background: rgba(10, 10, 10, 0.4);
+    }
+
+    .lv-tile .icon {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      opacity: 0;
+      transition: opacity 0.5s var(--ease);
+    }
+
+    .lv-tile:hover .icon {
+      opacity: 1;
+    }
+
+    .lv-tile .icon span {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      background: var(--ink-foreground);
+      color: var(--ink);
+    }
+
+    /* Stats */
+    .lv-stats-section {
+      border-top: 1px solid var(--hairline);
+      background: var(--ink);
+      color: var(--ink-foreground);
+    }
+
+    .lv-stats-section .lv-container {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    @media (min-width: 768px) {
+      .lv-stats-section .lv-container {
+        padding-top: 112px;
+        padding-bottom: 112px;
+      }
+    }
+
+    .lv-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      background: rgba(250, 250, 250, 0.15);
+      margin-top: 56px;
+    }
+
+    @media (min-width: 768px) {
+      .lv-stats-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-top: 80px;
+      }
+    }
+
+    .lv-stat {
+      background: var(--ink);
+      padding: 28px;
+    }
+
+    @media (min-width: 768px) {
+      .lv-stat {
+        padding: 40px;
+      }
+    }
+
+    .lv-stat-num {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.025em;
+      font-size: clamp(3rem, 6vw, 4.5rem);
+    }
+
+    .lv-stat-label {
+      margin-top: 20px;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      color: rgba(250, 250, 250, 0.7);
+    }
+
+    /* Lightbox */
+    .lv-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(10, 10, 10, 0.95);
+      padding: 16px;
+      animation: lv-fade-in 0.2s var(--ease);
+    }
+
+    .lv-lightbox[hidden] {
+      display: none;
+    }
+
+    @keyframes lv-fade-in {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .lv-lb-btn {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      background: var(--ink-foreground);
+      color: var(--ink);
+      border: none;
+      cursor: pointer;
+    }
+
+    .lv-lb-close {
+      right: 20px;
+      top: 20px;
+    }
+
+    .lv-lb-prev {
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .lv-lb-next {
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @media (min-width: 768px) {
+      .lv-lb-prev {
+        left: 40px;
+      }
+
+      .lv-lb-next {
+        right: 40px;
+      }
+    }
+
+    .lv-lb-stage {
+      position: relative;
+      max-height: 88vh;
+      width: 100%;
+      max-width: 1024px;
+    }
+
+    .lv-lb-stage img {
+      max-height: 80vh;
+      width: 100%;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+
+    .lv-lb-counter {
+      margin-top: 12px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      color: rgba(250, 250, 250, 0.7);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <!-- Hero -->
+    <section class="lv-hero">
+      <div class="lv-container">
+        <div class="lv-reveal">
+          <span class="lv-eyebrow muted">Projects</span>
+          <h1 class="lv-display">Selected <span class="italic-light">work.</span></h1>
+          <p class="lv-lede">A visual portfolio of 3VTEK installations across Hyderabad and South India.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="lv-gallery-section">
+      <div class="lv-container">
+        <div class="lv-grid" id="grid"></div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="lv-stats-section">
+      <div class="lv-container">
+        <div class="lv-reveal">
+          <span class="lv-eyebrow on-dark">Milestones</span>
+          <h2 class="lv-display lv-display-md">Achievements <span class="italic-light">in numbers.</span></h2>
+        </div>
+        <div class="lv-stats-grid" id="stats">
+          <div class="lv-stat lv-reveal">
+            <div class="lv-stat-num" data-to="1000" data-suffix="+">0</div>
+            <div class="lv-stat-label">Projects Completed</div>
+          </div>
+          <div class="lv-stat lv-reveal">
+            <div class="lv-stat-num" data-to="20" data-suffix="+">0</div>
+            <div class="lv-stat-label">Years of Experience</div>
+          </div>
+          <div class="lv-stat lv-reveal">
+            <div class="lv-stat-num" data-to="50" data-suffix="+">0</div>
+            <div class="lv-stat-label">Brand Partners</div>
+          </div>
+          <div class="lv-stat lv-reveal">
+            <div class="lv-stat-num" data-to="100" data-suffix="%">0</div>
+            <div class="lv-stat-label">Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lv-lightbox" id="lightbox" role="dialog" aria-modal="true" hidden>
+    <button class="lv-lb-btn lv-lb-close" id="lbClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 6 6 18M6 6l12 12" /></svg>
+    </button>
+    <button class="lv-lb-btn lv-lb-prev" id="lbPrev" aria-label="Previous">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="m15 18-6-6 6-6" /></svg>
+    </button>
+    <button class="lv-lb-btn lv-lb-next" id="lbNext" aria-label="Next">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="m9 18 6-6-6-6" /></svg>
+    </button>
+    <div class="lv-lb-stage" id="lbStage">
+      <img id="lbImg" alt="" />
+      <div class="lv-lb-counter" id="lbCounter"></div>
+    </div>
+  </div>
+
+  <!-- Site shared JS (navbar + footer) -->
+  <script src="js/site.js"></script>
+  <script>
+    window.initSite();
+  </script>
+
+  <!-- Lovable page script -->
+  <script>
+    var IMAGES = [
+      "assets/Project-images/001.webp",
+      "assets/Project-images/002.webp",
+      "assets/Project-images/003.webp",
+      "assets/Project-images/004.webp",
+      "assets/Project-images/005.webp",
+      "assets/Project-images/006.webp",
+      "assets/Project-images/007.webp",
+      "assets/Project-images/008.webp",
+      "assets/Project-images/009.webp",
+      "assets/Project-images/010.webp",
+      "assets/Project-images/011.webp",
+      "assets/Project-images/012.webp",
+      "assets/Project-images/013.webp",
+      "assets/Project-images/014.webp",
+      "assets/Project-images/015.webp",
+      "assets/Project-images/016.webp",
+      "assets/Project-images/017.webp",
+      "assets/Project-images/018.webp",
+      "assets/Project-images/019.webp",
+      "assets/Project-images/020.webp",
+      "assets/Project-images/021.webp",
+      "assets/Project-images/022.webp",
+      "assets/Project-images/023.webp",
+      "assets/Project-images/024.webp",
+      "assets/Project-images/025.webp",
+      "assets/Project-images/026.webp",
+      "assets/Project-images/027.webp",
+      "assets/Project-images/028.webp",
+      "assets/Project-images/029.webp",
+      "assets/Project-images/030.webp",
+      "assets/Project-images/031.webp",
+      "assets/Project-images/032.webp",
+      "assets/Project-images/033.webp",
+      "assets/Project-images/034.webp",
+      "assets/Project-images/035.webp",
+      "assets/Project-images/036.webp",
+      "assets/Project-images/037.webp",
+      "assets/Project-images/038.webp",
+      "assets/Project-images/039.webp",
+      "assets/Project-images/040.webp",
+      "assets/Project-images/041.webp",
+      "assets/Project-images/042.webp",
+      "assets/Project-images/043.webp",
+      "assets/Project-images/044.webp",
+      "assets/Project-images/045.webp",
+      "assets/Project-images/046.webp",
+      "assets/Project-images/047.webp",
+      "assets/Project-images/048.webp",
+      "assets/Project-images/049.webp",
+      "assets/Project-images/050.webp",
+      "assets/Project-images/051.webp",
+      "assets/Project-images/052.webp",
+      "assets/Project-images/053.webp",
+      "assets/Project-images/054.webp",
+      "assets/Project-images/055.webp",
+      "assets/Project-images/056.webp",
+      "assets/Project-images/057.webp",
+      "assets/Project-images/058.webp",
+      "assets/Project-images/059.webp",
+      "assets/Project-images/060.webp",
+      "assets/Project-images/061.webp",
+      "assets/Project-images/062.webp",
+      "assets/Project-images/063.webp",
+      "assets/Project-images/064.webp",
+      "assets/Project-images/065.webp",
+      "assets/Project-images/066.webp",
+      "assets/Project-images/067.webp",
+      "assets/Project-images/068.webp",
+      "assets/Project-images/069.webp",
+      "assets/Project-images/070.webp",
+      "assets/Project-images/071.webp",
+      "assets/Project-images/072.webp",
+      "assets/Project-images/073.webp",
+      "assets/Project-images/074.webp",
+      "assets/Project-images/075.webp",
+      "assets/Project-images/076.webp",
+      "assets/Project-images/077.webp",
+      "assets/Project-images/078.webp",
+      "assets/Project-images/079.webp",
+      "assets/Project-images/080.webp",
+      "assets/Project-images/081.webp",
+      "assets/Project-images/082.webp",
+      "assets/Project-images/083.webp",
+      "assets/Project-images/084.webp"
+    ];
+
+    var expandSvg =
+      '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>';
+
+    // Build grid
+    var grid = document.getElementById("grid");
+    IMAGES.forEach(function (src, i) {
+      var btn = document.createElement("button");
+      btn.className = "lv-tile lv-reveal";
+      btn.style.transitionDelay = Math.min(i * 40, 600) + "ms";
+      btn.setAttribute("aria-label", "Open image " + (i + 1));
+      btn.innerHTML =
+        '<img src="' + src + '" alt="" loading="lazy" />' +
+        '<div class="overlay"></div>' +
+        '<div class="icon"><span>' + expandSvg + '</span></div>';
+      btn.addEventListener("click", function () {
+        openLightbox(i);
+      });
+      grid.appendChild(btn);
+    });
+
+    // Reveal on scroll
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add("is-visible");
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: "0px 0px -40px 0px"
+    });
+    document.querySelectorAll(".lv-reveal").forEach(function (el) {
+      revealObserver.observe(el);
+    });
+
+    // Counter animation
+    var easeOut = function (t) {
+      return 1 - Math.pow(1 - t, 3);
+    };
+    var animateCounter = function (el) {
+      var to = parseFloat(el.dataset.to || "0");
+      var suffix = el.dataset.suffix || "";
+      var dur = 1600;
+      var start = performance.now();
+      var tick = function (now) {
+        var t = Math.min((now - start) / dur, 1);
+        var v = Math.round(to * easeOut(t));
+        el.textContent = v + suffix;
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    var statObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          animateCounter(e.target);
+          statObserver.unobserve(e.target);
+        }
+      });
+    }, {
+      threshold: 0.4
+    });
+    document.querySelectorAll(".lv-stat-num").forEach(function (el) {
+      statObserver.observe(el);
+    });
+
+    // Lightbox
+    var lb = document.getElementById("lightbox");
+    var lbImg = document.getElementById("lbImg");
+    var lbCounter = document.getElementById("lbCounter");
+    var lbStage = document.getElementById("lbStage");
+    var active = null;
+
+    function render() {
+      if (active === null) return;
+      lbImg.src = IMAGES[active];
+      lbCounter.textContent = (active + 1) + " / " + IMAGES.length;
+    }
+
+    function openLightbox(i) {
+      active = i;
+      lb.hidden = false;
+      document.body.classList.add("no-scroll");
+      render();
+    }
+
+    function closeLightbox() {
+      active = null;
+      lb.hidden = true;
+      document.body.classList.remove("no-scroll");
+    }
+
+    function next() {
+      if (active !== null) {
+        active = (active + 1) % IMAGES.length;
+        render();
+      }
+    }
+
+    function prev() {
+      if (active !== null) {
+        active = (active - 1 + IMAGES.length) % IMAGES.length;
+        render();
+      }
+    }
+
+    document.getElementById("lbClose").addEventListener("click", closeLightbox);
+    document.getElementById("lbNext").addEventListener("click", function (e) {
+      e.stopPropagation();
+      next();
+    });
+    document.getElementById("lbPrev").addEventListener("click", function (e) {
+      e.stopPropagation();
+      prev();
+    });
+    lb.addEventListener("click", function (e) {
+      if (e.target === lb) closeLightbox();
+    });
+    lbStage.addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
+    window.addEventListener("keydown", function (e) {
+      if (lb.hidden) return;
+      if (e.key === "Escape") closeLightbox();
+      else if (e.key === "ArrowRight") next();
+      else if (e.key === "ArrowLeft") prev();
+    });
+  </script>
+</body>
+
+</html>

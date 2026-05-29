@@ -1,17 +1,24 @@
- 
- on: push
-name: 🚀 Deploy website on push
+on:
+  push:
+    branches:
+      - main
+
+name: Deploy website on push
+
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: Deploy
     runs-on: ubuntu-latest
+    environment: production
+
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v6
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.4.0
-      with:
-        server: ftp.satishponnala.com
-        username: ramu@3vtek.com
-        password: ${{ secrets.ftp_password }}
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ftp.satishponnala.com
+          username: ramu@3vtek.com
+          password: ${{ secrets.ftppp }}
+          protocol: ftp   # upgrade from plain FTP if host supports it

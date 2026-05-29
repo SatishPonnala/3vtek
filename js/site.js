@@ -170,7 +170,7 @@ var LOCAL_BRAND_LOGOS = {
   "MONOPRICE": "assets/Brand-logos/Monoprice.webp",
   "KONIG": "assets/Brand-logos/Konig.webp",
   "BANDRIDGE": "assets/Brand-logos/bandridge.webp",
-  "EARTHQUAKE SOUND": "assets/Brand-logos/Earthquake-Sound.webp",
+  "EARTHQUAKE SOUND": "assets/Brand-logos/Earthquake-sound.webp",
   "ELIPSON": "assets/Brand-logos/Elipson.webp",
 };
 window.LOCAL_BRAND_LOGOS = LOCAL_BRAND_LOGOS;
@@ -327,7 +327,7 @@ window.renderFooter = function () {
     '<div class="footer-grid">' +
     '<div>' +
     '<div class="brand footer-brand"><img src="assets/Logo.webp" alt="3V TEK" class="brand-logo"></div>' +
-    '<p class="meta">Bespoke home theaters, acoustic engineering and smart automation. Crafted in Hyderabad since ' + c.since + '.</p>' +
+    '<p class="meta">3VTEK home theaters, acoustic engineering and smart automation. Crafted in Hyderabad since ' + c.since + '.</p>' +
     '<div class="socials">' +
     '<a href="https://www.instagram.com/3vtekllp/" aria-label="Instagram" target="_blank" rel="noreferrer">' + window.ICON.ig + '</a>' +
     '<a href="https://www.facebook.com/share/1FXLkiHAzW/" aria-label="Facebook" target="_blank" rel="noreferrer">' + window.ICON.fb + '</a>' +

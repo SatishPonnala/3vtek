@@ -23,7 +23,7 @@ var previewServices = [{
   {
     title: "Smart Automation",
     desc: "Lighting, climate, motorised screens and audio fully integrated under one touch.",
-    img: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=80",
+    img: "assets/Project-images/Smart-Automation.webp",
     icon: window.ICON.settings
   },
 ];
@@ -84,12 +84,12 @@ var featured = [{
   {
     title: "Club House Theatre",
     cat: "Mini Theatre",
-    img: "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=1200&q=80"
+    img: "assets/Project-images/ClubHouse-Theater.webp"
   },
   {
     title: "Boardroom Acoustics",
     cat: "Conference Room",
-    img: "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&w=1200&q=80"
+    img: "assets/Project-images/Boardroom-Acoustics.webp"
   },
 ];
 document.getElementById("featured-projects").innerHTML = featured.map(function (p, i) {
